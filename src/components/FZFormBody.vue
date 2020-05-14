@@ -18,7 +18,7 @@
         <v-card-text>
           <v-text-field
             label="Email"
-            value="john@vuetifyjs.com"
+            value="info@flyzermatt.com"
           ></v-text-field>
           <span class="caption grey--text text--darken-1">
             This is the email you will use to login to your Vuetify account
