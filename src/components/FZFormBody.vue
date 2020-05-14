@@ -1,7 +1,9 @@
 <template>
   <v-card
-    class="mx-auto"
-    max-width="500"
+    class="mx-auto fill-height "
+    max-width="900"
+    min-height="500" 
+    fluid
   >
     <v-card-title class="title font-weight-regular justify-space-between">
       <span>{{ currentTitle }}</span>
@@ -15,7 +17,7 @@
 
     <v-window v-model="step">
       <v-window-item :value="1">
-        <v-card-text>
+        <v-card-text >
           <v-text-field
             label="Email"
             value="info@flyzermatt.com"
@@ -48,34 +50,32 @@
             class="mb-4"
             contain
             height="128"
-            src="https://cdn.vuetifyjs.com/images/logos/v.svg"
+            src="@/assets/flyzermatt-logo-box-shadow.svg"
           ></v-img>
-          <h3 class="title font-weight-light mb-2">Welcome to Vuetify</h3>
-          <span class="caption grey--text">Thanks for signing up!</span>
+          <h3 class="title font-weight-light mb-2" style="letter-spacing:0.3em !important;">PARAGLIDING</h3>
+          <span class="caption grey--text">Thanks for Booking! (You'll hear from us shortly)</span>
         </div>
       </v-window-item>
     </v-window>
 
-    <v-divider></v-divider>
-
-    <v-card-actions>
+    <v-footer
+      absolute
+      style="padding-bottom:20px; background-color:white;"
+    >
       <v-btn
         :disabled="step === 1"
         text
         @click="step--"
-      >
-        Back
-      </v-btn>
+      > Back </v-btn>
       <v-spacer></v-spacer>
       <v-btn
         :disabled="step === 3"
         color="primary"
         depressed
         @click="step++"
-      >
-        Next
-      </v-btn>
-    </v-card-actions>
+      > Next </v-btn>
+    </v-footer>
+
   </v-card>
 </template>
 
@@ -88,9 +88,9 @@
     computed: {
       currentTitle () {
         switch (this.step) {
-          case 1: return 'Sign-up'
-          case 2: return 'Create a password'
-          default: return 'Account created'
+          case 1: return 'Get started'
+          case 2: return 'Choose a Time to fly'
+          default: return 'Booking sent'
         }
       },
     },

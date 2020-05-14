@@ -1,36 +1,34 @@
 <template>
   <div id="app">
-    <v-app id="inspire">
+    <v-app>
 
-        <v-container style="border:1px silver solid;"  class="pa-0" >
+      <v-row class="py-md-12" justify="center" >
+        <v-col class="pa-0 " 
+          md="7"
+          style=""
+        >
 
-            <v-row align="center" justify="center" style="border:1px maroon solid;" >
+          <v-card class="fill-height" style="box-shadow:none;" tile fluid>
+            <!-- <v-toolbar color="primary" dark flat >
+              <v-toolbar-title>
+                <FZFormHeader/>
+              </v-toolbar-title>
+            </v-toolbar> -->
 
-              <v-col class="pa-0 xs-mt-0 sm-mt-12" id="addPaddingAndMarginsHere" style="border:1px gold solid;" >
+            <FZFormBody/>
+            <FZFormFooter/>
 
-                <v-card class="elevation-12" tile style="">
-                  <v-toolbar color="primary" dark flat >
-                    <v-toolbar-title>
-                      <FZFormHeader/>
-                    </v-toolbar-title>
-                  </v-toolbar>
+          </v-card>
 
-                  <FZFormBody/>
-                  <FZFormFooter/>
-
-                </v-card>
-
-              </v-col>
-            </v-row>
-
-        </v-container>
+        </v-col>
+      </v-row>
 
     </v-app>
   </div>
 </template>
 
 <script>
-import FZFormHeader from './components/FZFormHeader';
+// import FZFormHeader from './components/FZFormHeader';
 import FZFormBody from './components/FZFormBody';
 import FZFormFooter from './components/FZFormFooter';
 
@@ -38,7 +36,6 @@ export default {
   name: 'App',
 
   components: {
-    FZFormHeader,
     FZFormBody,
     FZFormFooter
   },
