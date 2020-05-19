@@ -2,7 +2,6 @@
   <v-card
     class="mx-auto fill-height "
     max-width="900"
-    min-height="500" 
     fluid
   >
     <v-card-title class="title font-weight-regular justify-space-between">

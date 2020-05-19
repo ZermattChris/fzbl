@@ -2,7 +2,7 @@
   <div id="app">
     <v-app>
 
-      <v-row class="py-md-12 pb-12" justify="center" style="background-color:silver;">
+      <v-row class="py-md-12" justify="center" style="background-color:silver;">
         <v-col class="pa-0 " 
           md="7"
           style=""
